@@ -1,0 +1,10 @@
+{% extends 'admin/base_site.html' %}
+{% block content %}
+<h1>THỐNG KÊ CÁC QUẢN LÝ</h1>
+<h2>Số lượng quản lý: {{ delivery_count }}</h2>
+<ul>
+    {% for s in stats %}
+    <li><strong>{{ s.name }}</strong> có {{ s.shipper_count }} nhân viên </li>
+    {% endfor %}
+</ul>
+{% endblock %}
